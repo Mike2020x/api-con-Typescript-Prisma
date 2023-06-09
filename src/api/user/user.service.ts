@@ -39,7 +39,7 @@ export async function deleteUser(id: string) {
   });
   return user;
 }
-
+//update user
 export async function updateUser(data: User) {
   const user = await prisma.user.update({
     where: {

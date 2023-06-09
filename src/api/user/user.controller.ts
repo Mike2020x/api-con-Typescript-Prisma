@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
 
 import {
-  createUser,
   getAllUsers,
+  createUser,
   getUser,
   deleteUser,
   updateUser

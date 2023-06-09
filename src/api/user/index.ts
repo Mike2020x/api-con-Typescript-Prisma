@@ -1,8 +1,8 @@
 import { Router } from 'express';
 
 import {
-  createUserHandler,
   getAllUsersHandler,
+  createUserHandler,
   getUserHandler,
   deleteUserHandler,
   updateUserHandler
