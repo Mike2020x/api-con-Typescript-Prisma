@@ -11,6 +11,9 @@ function routes(app: Application) {
   app.use('/api/users', userRouter);
   app.use('/api/posts', postRouter);
   app.use('/api/reviews', reviewRouter);
+  app.use("/", (req, res) => {
+    res.send("Bienvenido al ejercicio: api-con typescript-prisma escribe las diferente rutas para probarlas o usa postman para hacer peticiones.")
+  })
 }
 
 export default routes;
