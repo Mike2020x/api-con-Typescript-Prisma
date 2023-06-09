@@ -10,31 +10,33 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Users {
-  id     String    @id @default(cuid())
-  name   String
-  email  String    @unique
-  avatar String
-  post   Posts[]
-  review Reviews[]
+model user {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  avatar    String
+  post      post[]
+  review    review[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
-model Posts {
-  id          String    @id @default(cuid())
+model post {
+  id          String   @id @default(cuid())
   title       String
   content     String
   isPublished Boolean
-  author      Users     @relation(fields: [author_Id], references: [id])
+  author      user     @relation(fields: [author_Id], references: [id])
   author_Id   String
-  reviews     Reviews[]
+  reviews     review[]
 }
 
-model Reviews {
+model review {
   id        String @id @default(cuid())
   title     String
   comment   String
-  post      Posts  @relation(fields: [post_Id], references: [id])
+  post      post   @relation(fields: [post_Id], references: [id])
   post_Id   String
-  author    Users  @relation(fields: [author_Id], references: [id])
+  author    user   @relation(fields: [author_Id], references: [id])
   author_Id String
 }
