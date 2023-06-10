@@ -8,6 +8,7 @@ This is a solution to the API con typescript y prisma project of the Make It Rea
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
+    - [hot to use](#hot-to-use)
     - [Screenshot](#screenshot)
   - [My process](#my-process)
     - [Built with](#built-with)
@@ -23,6 +24,15 @@ This is a solution to the API con typescript y prisma project of the Make It Rea
 - Create a crud aplication using prisma and typescript
 - We must have the necessary endpoints to perform the CRUD operations of the 3 entities (users, reviews, posts)
 
+### hot to use 
+
+npm install 
+npm run dev
+use postman at 
+ '/api/users'
+'/api/posts' 
+'/api/reviews' 
+"/"
 ### Screenshot
 
 ![](./screenshot.jpg)
